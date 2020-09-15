@@ -1,42 +1,33 @@
-# 내가 푼 방식
-n, m = map(int, input().split())
+n, m, k = map(int, input().split())  # n은 크기, m은 덧셈 횟수, k는 몇 번 사용 가능한지
+num = list(map(int, input().split()))
 
-for i in range(n):
-    num = list(map(int, input().split()))
-    num.sort()
-    min_num = num[0]
-    if min_num > num[0]:
-        min_num = num[0]
+num.sort()
+big = num[n - 1]  # 가장 큰 수
+big_next = num[n - 2]  # 두 번째로 큰 수
 
-print(min_num)
+sum = 0
 
-# ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-# 책 풀이 - min() 함수 사용
+while True:
+    for i in range(k):
+        if m == 0:
+            break
+        sum += big
+        m -= 1
+    if m == 0:
+        break
+    sum += big_next
+    m -= 1
 
-n, m = map(int, input().split())
-
-result = 0
-
-for i in range(n):
-    data = list(map(int, input().split()))
-    min_value = min(data)
-    result = max(result, min_value)
-
-print(result)
+print(sum)
 
 # ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-# 책 풀이 - 2중 반복문 구조
+# 반복되는 수열을 이용한 풀이
 
-n, m = map(int, input().split())
+count = int(m / (k + 1)) * k
+count += m % (k + 1)
 
-result = 0
+sum = 0
+sum += (count) * big  # 첫 번째 큰 수 더하기
+sum += (m - count) * big_next  # 두 번째 큰 수 더하기
 
-for i in range(n):
-    data = list(map(int, input().split()))
-
-    min_value = 10001
-    for a in data:
-        min_value = min(min_value, a)
-    result = max(result, min_value)
-
-print(result)
+print(sum)
