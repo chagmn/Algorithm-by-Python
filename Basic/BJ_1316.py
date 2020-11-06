@@ -7,7 +7,7 @@ for i in range(n):
     for j in range(len(word) - 1):
         if word[j] != word[j + 1]:
             new = word[j + 1 :]
-            print(new)
+
             if new.count(word[j]) > 0:
                 error += 1
     if error == 0:
