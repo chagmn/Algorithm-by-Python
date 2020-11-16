@@ -7,11 +7,10 @@ def backtracking(depth, n, m):
         print(" ".join(map(str, arr)))
         return
 
-    for i in range(depth, n):
+    for i in range(n):
         arr.append(i + 1)
         backtracking(depth + 1, n, m)
         arr.pop()
-        print(i, arr)
 
 
 backtracking(0, n, m)
