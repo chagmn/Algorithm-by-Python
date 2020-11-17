@@ -1,8 +1,19 @@
 n = int(input())
 arr = []
-gap = []
+count = 0
 
 for _ in range(n):
     start, end = map(int, input().split())
     arr.append([start, end])
-    gap.append(end - start)
+
+arr.sort(key=lambda x: x[0])
+arr.sort(key=lambda x: x[1])
+
+start = 0
+
+for i in arr:
+    if i[0] >= start:
+        start = i[1]
+        count += 1
+
+print(count)
