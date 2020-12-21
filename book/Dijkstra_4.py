@@ -1,27 +1,42 @@
-n, m, c = map(int, input().split())
+import heapq
+import sys
+
+input = sys.stdin.readline
 INF = int(1e9)
 
-graph = [[INF] * (n + 1) for _ in range(n + 1)]
-
-# 자기 자신 -> 자기 자신 => 0
-for a in range(1, n + 1):
-    for b in range(1, n + 1):
-        if a == b:
-            graph[a][b] = 0
+n, m, c = map(int, input().split())
+graph = [[] for i in range(n + 1)]
+distance = [INF] * (n + 1)
 
 for _ in range(m):
+    # x: 시작, y: 도착, z: 시간
     x, y, z = map(int, input().split())
-    graph[x][y] = z
+    graph[x].append((y, z))
 
-for i in range(1, n + 1):
-    for a in range(1, n + 1):
-        for b in range(1, n + 1):
-            graph[a][b] = min(graph[a][b], graph[a][i] + graph[i][b])
 
-for i in range(m):
-    max = graph[c][0]
+def dijkstra(start):
+    q = []
+    heapq.heappush(q, (0, start))
+    distance[start] = 0
+    while q:
+        dist, now = heapq.heappop(q)
+        if distance[now] < dist:
+            continue
 
-    if max < graph[c][i]:
-        max = graph[c][i]
+        for i in graph[now]:
+            cost = dist + i[1]
+            if cost < distance[i[0]]:
+                distance[i[0]] = cost
+                heapq.heappush(q, (cost, i[0]))
 
-print()
+
+dijkstra(c)
+
+count = 0
+max_distance = 0
+for i in distance:
+    if i != INF:
+        count += 1
+        max_distance = max(max_distance, i)
+
+print(count - 1, max_distance)
