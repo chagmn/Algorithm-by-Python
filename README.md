@@ -1,6 +1,17 @@
 # Algorithm Solving
-백준, 프로그래머스, 알고리즘 책의 문제들을 Python으로 해결하자!
+> 알고리즘 문제풀이 저장소
+> 사용언어 : Python
 
 ## Programmers
----
-[Level1](https://github.com/chagmn/Algorithm-Solving/tree/master/Programmers/Level1)
+### Contents
+- [Level1](https://github.com/chagmn/Algorithm-Solving/tree/master/Programmers/Level1)
+
+
+## Baekjoon Online Judge
+### Contens
+- []
+
+
+## 이것이 코딩 테스트다 with 파이썬
+### Contents
+- []
