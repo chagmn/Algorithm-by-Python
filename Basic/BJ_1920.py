@@ -20,6 +20,4 @@ m = int(sys.stdin.readline())
 arr_m = list(map(int, sys.stdin.readline().split()))
 
 for i in arr_m:
-    start = 0
-    end = len(arr_m) - 1
-    print(binary_search(i, start, end, arr_n))
+    print(binary_search(i, 0, len(arr_n) - 1, arr_n))
