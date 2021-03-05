@@ -3,16 +3,14 @@
 > 알고리즘 문제풀이 저장소  
 > 사용언어 : Python
 
-### Programmers
-
-#### Contents
+## Programmers
+### Contents
 
 - [Level1](https://github.com/chagmn/Algorithm-Solving/tree/master/Programmers/Level1)
 
 
-### 이것이 코딩 테스트다 with 파이썬
-
-#### Contents
+## 이것이 코딩 테스트다 with 파이썬
+### Contents
 
 - [Binary Search](https://github.com/chagmn/Algorithm-Solving/tree/master/Book/Binary_Search)
 - [DFS/BFS](https://github.com/chagmn/Algorithm-Solving/tree/master/Book/DFS%20BFS)
@@ -24,8 +22,7 @@
 - [Sort](https://github.com/chagmn/Algorithm-Solving/tree/master/Book/Sort)
 
 
-### Baekjoon Online Judge
-
-#### Contens
+## Baekjoon Online Judge
+### Contens
 
 - [백준 문제 뒤죽박죽..](https://github.com/chagmn/Algorithm-Solving/tree/master/BOJ)
