@@ -3,10 +3,11 @@
 > 알고리즘 문제풀이 저장소  
 > 사용언어 : Python
 
-## Programmers
+## Programmers (프로그래머스)
 ### Contents
 
 - [Level1](https://github.com/chagmn/Algorithm-Solving/tree/master/Programmers/Level1)
+- [Level2](https://github.com/chagmn/Algorithm-Solving/tree/master/Programmers/Level2)
 
 
 ## 이것이 코딩 테스트다 with 파이썬
@@ -22,7 +23,7 @@
 - [Sort](https://github.com/chagmn/Algorithm-Solving/tree/master/Book/Sort)
 
 
-## Baekjoon Online Judge
+## Baekjoon Online Judge (백준)
 ### Contens
 
 - [백준 문제 뒤죽박죽..](https://github.com/chagmn/Algorithm-Solving/tree/master/BOJ)
