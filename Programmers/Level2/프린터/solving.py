@@ -7,9 +7,13 @@ def solution(priorities, location):
         (val, index) for index, val in enumerate(priorities)
     )  # 순서를 먼저 -> 우선순위 최댓값을 위해서
 
-    while len(dq) > 0:
+    while len(dq):
         data = dq.popleft()
 
+        # 마지막이 pop된 후 큐가 비었을 경우 -> 마지막이 요청한 문서
+        if len(dq) == 0:
+            answer += 1
+            break
         # 우선순위가 가장 큰 값보다 작을 때 -> 아직 프린트 못함
         if data[0] < max(dq)[0]:
             dq.append(data)
