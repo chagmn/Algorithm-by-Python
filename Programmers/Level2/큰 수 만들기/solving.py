@@ -1,18 +1,21 @@
 def solution(number, k):
-    answer = ""
-    start = 0
-    for i in range(len(number) - k):
-        max_num = number[start]
-        index = start
-        for j in range(start, i + k + 1):
-            if max_num < number[j]:
-                max_num = number[j]
-                index = j
-        start = index + 1
-        answer += max_num
-    return answer
+    stack = []
+    for i in number:
+        while stack and i > stack[-1]:
+            if k > 0:
+                stack.pop()
+                k -= 1
+            else:
+                break
+        stack.append(i)
+
+    if k > 0:
+        for i in range(k):
+            stack.pop()
+
+    print("".join(stack))
 
 
-number = "4177252841"
-k = 4
+number = "1231234"
+k = 3
 solution(number, k)
