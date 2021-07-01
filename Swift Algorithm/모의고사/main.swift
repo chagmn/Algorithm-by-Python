@@ -26,8 +26,6 @@ func solution(_ answers:[Int]) -> [Int] {
             score[3] = (score[3] ?? 0) + 1
         }
     }
-    print(score.values)
-    print(score.filter{$0.value == score.values.max()}.keys.sorted())
     return score.filter{$0.value == score.values.max()}.keys.sorted()
 
 }
